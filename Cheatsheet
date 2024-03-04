@@ -1,0 +1,36 @@
+#note to the myself
+---------------
+BeautifulSoup library:
+
+Let >soup = BeautifulSoup(contents, "html.parser")
+soup.descendants -> returns generator which contains all html tags (not subscriptable but iterable)
+soup.tag_name -> returns content of tag_name
+soup.tag_name.text -> returns content of tag_name without name of the tag
+soup.find('tag_name', attrs={'attr': 'value'}) -> returns content of tag_name with given attributes
+soup.find('tag_name', attr = 'value') -> same thing for single key
+soup.find('tag_name', attr1 = True)["attr2"] -> returns value of attribute attr2 in a tag_name with existing attribute attr1
+soup.find_all('tag_name') -> returns an iterable with all tag_names]
+soup.find_all('tag_name')[i].text -> picks i-th and removes <>
+tag.has_attr('X') -> checks if tag has attr X
+tag['X'] == 'Y' -> checks if attr X has value Y
+---------------
+Basic python:
+with open('response.html', 'w') as f:
+    f.write(contents)  -> writes the content into new file and removes any existing text (use 'a' instead of 'w' to append)
+    f.read() -> reads the file f
+---------------
+re library:
+re.search(formula, string) -> gives the match object
+Example:
+r'/([^/]*)$'
+r before the quotes -> interpret slashes as characters
+'asdf' -> look for a patter asdf in a string
+'(asd)f' -> as above. and give me asd substring
+$ -> look at the final match (?)
+^/ -> not / character
+* -> zero or more of characters in the form of [form]
+---------------
+General advice:
+The way html is shown by the website and the way it is read by browser are different. The browser fixes some errors and displays it accordingly.
+Look (with notepad!) on soup.prettify() to see how the tags are aligned without errors
+
