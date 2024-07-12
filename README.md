@@ -7,6 +7,7 @@ Libraries used:
 BeautifulSoup4, time, re, os, and requests.
 
 How to run:
+
 1.Execute main.py to run the script. This will create text files in '/stories' 
 
 2.Execute topdf.py. This will write a tex code in '/notestopdf' which can be compiled to a pdf book using TeXstudio.
